@@ -23,10 +23,6 @@ app.post('/chat/send', async (req, res) => {
   }
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
-
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
