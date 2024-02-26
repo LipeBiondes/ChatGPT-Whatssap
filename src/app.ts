@@ -13,6 +13,7 @@ app.use(cors())
 
 dotenv.config()
 
+/*
 app.post('/chat/send', async (req, res) => {
   const { to, body } = req.body
 
@@ -23,6 +24,7 @@ app.post('/chat/send', async (req, res) => {
     res.status(500).json({ success: false, error })
   }
 })
+*/
 
 app.post('/chat/receive', async (req, res) => {
   const twilioRequestBody = req.body
