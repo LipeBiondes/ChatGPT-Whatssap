@@ -16,6 +16,6 @@ export const getOpenAICompletion = async (input: string): Promise<string> => {
     return completion.choices[0].message?.content as string
   } catch (error) {
     console.log(`Error getting OpenAI completion: ${error}`)
-    return ''
+    return 'Não foi possível completar a mensagem. Tente novamente mais tarde.'
   }
 }

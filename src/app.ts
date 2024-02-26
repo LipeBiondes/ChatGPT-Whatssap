@@ -33,7 +33,7 @@ app.post('/chat/receive', async (req, res) => {
 
   try {
     const completion = await getOpenAICompletion(messageBody)
-    await sendWhatssapMessage(to, messageBody)
+    await sendWhatssapMessage(to, completion)
     res.status(200).json({ success: true, completion })
   } catch (error) {
     res.status(500).json({ success: false, error })
